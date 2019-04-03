@@ -1,0 +1,111 @@
+@media only screen and (max-width: 1200px) {
+    .tables-wrapper, .column-wrap {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .mobile-sidebar{
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+    }
+    .main-column{
+        width: 100% !important;
+    }
+    .header-img{
+        position: absolute;
+        background-size: 50%;
+    }
+    .header-row{
+        padding: 0px 1em;
+        height: 50px;
+        justify-content: flex-start !important;
+    }
+    .mobile-align{
+        width: 90%;
+        height: 100%;
+        background-color: white;
+        position: absolute !important;
+        right: 0;
+        top: 0;
+        padding-top: 2em;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+    }
+    .clickAway{
+        position: absolute;
+        height: 100%;
+        width: 10%;
+        left: 0;
+    }
+    .mobile-username-align{
+        font-size: 20px;
+    }
+    .logout-mobile{
+        position: absolute;
+        bottom: 3em;
+        z-index: 999999;
+       border-top: 1px solid $boderGray;
+       width: 100%;
+       padding-top: 1em;
+       color: grey;
+       font-weight: bold;
+    }
+    .mobile-profile-align{
+        height: 50px !important;
+        width: 50px !important;
+    }
+    .header-row{
+        position: fixed !important;
+        width: 100%;
+        z-index: 999;
+        top: 0;
+    }
+    .front-page-info{
+        padding-top:50px;
+    }
+    .mobile-profile-align-img{
+        background-size: 100% !important;
+        margin:0 !important;
+    }
+    .profile-image-wrapper{
+        position: relative !important;
+        margin-right: 0em !important;
+    }
+ 
+    .mobile-profile{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+       
+    }
+    .list-table {
+        margin-left: 0px !important;
+    }
+
+    .list-table:last-child {
+        margin-top: 2em;
+    }
+    .profile-image-wrapper{
+        position: absolute;
+        right: 0;
+    }
+    .profile-image-wrapper{
+        height: 35px;
+        width: 35px;
+    }
+    .header-profile-img {
+        background-size: 80%;
+    }
+    .hide-username, .logout-float{
+        display:none !important;
+    }
+    .mobile-dropdown{
+        border:none !important;
+    }
+}

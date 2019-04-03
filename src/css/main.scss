@@ -1,0 +1,22 @@
+@import '_variables';
+@import '_font';
+@import 'front_page';
+@import '_responsive';
+
+html,body{
+    height: 100%;
+    margin: 0 !important;
+    font-family: 'Nunito Sans', sans-serif !important;
+}
+.align-row{
+    display: flex ;
+    flex-flow: row nowrap ;
+    justify-content: center ; 
+    align-items: center ;
+}
+.align-column{
+    display: flex ;
+    flex-flow: column nowrap ;
+    justify-content: center ; 
+    align-items: center ;
+}
