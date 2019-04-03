@@ -1,6 +1,4 @@
-# Project Title
-
-To do list
+# To do list
 
 ## Getting Started
 
@@ -14,7 +12,7 @@ What things you need to install the software and how to install them
 npm install -g @vue/cli
 ```
 ## Implementation
-Used:Vue.js (Vue CLI 3.x., Element UI Library), Node.js(Express), HTML, CSS(SASS)
+Used: Vue.js (Vue CLI 3.x., Element UI Library), Node.js(Express), HTML, CSS(SASS)
 
 Description:
 Two tables containing items.
