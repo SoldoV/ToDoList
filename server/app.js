@@ -4,10 +4,17 @@ const cors = require('cors')
 const app = express()
 const bodyParser = require('body-parser');
 
-app.use(bodyParser.json({ limit: '10mb' }));
-app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
+app.use(bodyParser.json({
+  limit: '10mb'
+}));
+app.use(bodyParser.urlencoded({
+  extended: true,
+  limit: '10mb'
+}));
 app.use(cors());
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
 app.use(bodyParser.json())
 
 //My data
@@ -166,16 +173,23 @@ app.get('/', function (req, res) {
 });
 
 //Editing item name
-app.post('/', function (req, res) {
+app.post('/edit', function (req, res) {
   data.forEach((part, index, theArray) => {
     if (theArray[index].id == parseInt(req.body.id)) {
       theArray[index].item = req.body.item;
     }
   });
-  //Adding new item
-  if (parseInt(req.body.id) > data.length - 1) {
-    data.push({item: req.body.item,id: req.body.id,done: req.body.done});
-  }
+});
+
+//Adding new item
+app.post('/add', function (req, res) {
+  data.unshift({
+    item: req.body.item,
+    id: req.body.id,
+    done: req.body.done,
+    image: false,
+    src: ""
+  });
   res.send(data);
 });
 
@@ -220,7 +234,7 @@ app.delete('/deleteItem', function (req, res) {
 //Delete all items in table Done
 app.delete('/deleteAllDone', function (req, res) {
   data = data.filter((item) => item.done !== true);
-  data.forEach((part, index, theArray)=>{
+  data.forEach((part, index, theArray) => {
     theArray[index].id = index;
   });
   res.json(data)

@@ -9,19 +9,19 @@
           <div class="header-profile">
             <div class="header-profile-img-text hide-username font-nunito-bold">{{username}}</div>
             <div class="profile-image-wrapper align-row">
-            <div class="header-profile-img"  @click="mySidebar" :style="{ backgroundImage: 'url(' + profile + ') ' }">
-            </div>
+              <div class="header-profile-img" @click="mySidebar" :style="{ backgroundImage: 'url(' + profile + ') ' }">
+              </div>
             </div>
           </div>
           <!-------------------Log out------------------------->
-          <el-dropdown-menu slot="dropdown" class="mobile-dropdown" style="margin-top:15px; width: 200px; border-radius:0px">
+          <el-dropdown-menu slot="dropdown" class="mobile-dropdown"
+            style="margin-top:15px; width: 200px; border-radius:0px">
             <el-dropdown-item class="header-profile-img-text logout-float font-nunito-bold align-row">
               <i class="material-icons">exit_to_app</i>
               <div style="display:inline-block">Log out</div>
             </el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
-
       </el-col>
     </el-col>
   </el-row>
@@ -41,10 +41,10 @@
         username: "Username",
       }
     },
-    methods:{
+    methods: {
       //Emit to main page
-      mySidebar(){
-        if(screen.width < 922)this.$emit('myEvent')
+      mySidebar() {
+        if (screen.width < 922) this.$emit('myEvent')
       }
     }
   }

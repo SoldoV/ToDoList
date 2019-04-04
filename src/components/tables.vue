@@ -214,11 +214,18 @@
       },
       //Add new item
       addNewTask() {
-        this.table1.unshift({
+        let data = {
           item: "",
           id: this.tables.length,
           done: false
-        })
+        }
+        axios.post(this.url + '/add', data)
+          .then((response) => {
+            this.handleResponse(response.data)
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       },
       //Delete one item
       deleteItem(arr) {
@@ -259,7 +266,7 @@
             id: arr.id,
             done: arr.done
           }
-          axios.post(this.url, data)
+          axios.post(this.url + "/edit", data)
             .then((response) => {
               this.handleResponse(response.data)
             })
